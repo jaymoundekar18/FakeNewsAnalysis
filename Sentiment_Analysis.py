@@ -49,13 +49,20 @@ if uploaded_file is not None:
     st.write("#### Provided Dataset :")
     # Load the data into a DataFrame
     df = pd.read_csv(uploaded_file)
-    st.write(df.head(10))
+    st.write(df)
 
     st.write("-----------------------------------------------------------------------------------------------------------")
 
 
 # Preprocessing of the dataset
+    def langconv(txt):
+        translated = GoogleTranslator(source='auto', target='english').translate(txt)
+        return translated
     
+    df['Converted_Tweets'] = df["Tweets"].apply(lambda x : langconv(x))
+    st.write('#### Converting the original tweet text into English text')
+    st.write(df)
+    st.write("-----------------------------------------------------------------------------------------------------------")
     def data_processing(text):
         text = text.lower()
         text = re.sub(r"https\S+|www\S+https\S+", '',text, flags=re.MULTILINE)
@@ -66,7 +73,7 @@ if uploaded_file is not None:
         return " ".join(filtered_text)
 
     new_df = pd.DataFrame()
-    new_df["Tweets"] = df["Tweets"].apply(data_processing)
+    new_df["Tweets"] = df["Converted_Tweets"].apply(data_processing)
     new_df = new_df.drop_duplicates("Tweets")
 
     stemmer = PorterStemmer()

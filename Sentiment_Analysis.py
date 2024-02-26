@@ -1,6 +1,6 @@
 import numpy as np 
 import pandas as pd
-import matplotlib.pyplot as plt
+import matplotlib as plt
 from matplotlib import style
 style.use('ggplot')
 import streamlit as st

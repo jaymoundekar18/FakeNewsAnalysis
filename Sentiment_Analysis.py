@@ -120,7 +120,7 @@ if uploaded_file is not None:
     fig = plt.figure(figsize=(8,6))
     # plt.title("Count of Sentiment in the Data ")
     # sns.set_palette("Set2")
-    sns.countplot(x='Sentiment', data = new_df,palette=["red", "blue", "green"])
+    sns.countplot(x='Sentiment', data = new_df,palette=["blue", "green", "red"])
 
     st.pyplot(fig)
 
@@ -129,7 +129,7 @@ if uploaded_file is not None:
     
     st.write("#### Distribution of sentiments in the dataset")
     fig = plt.figure(figsize=(8,8))
-    colors = ("green", "blue", "red")
+    colors = ("blue", "green", "red")
     wp = {'linewidth':2, 'edgecolor':"black"}
     tags = new_df['Sentiment'].value_counts()
     explode = (0.1,0.1,0.1)

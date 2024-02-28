@@ -23,11 +23,6 @@ from transformers import AutoTokenizer, AutoModelForSequenceClassification
 from scipy.special import softmax
 from deep_translator import GoogleTranslator
 
-# Open the matplotlibrc file in append mode and add the specified line
-with open("~/.matplotlib/matplotlibrc", "a") as file:
-    file.write("backend: TkAgg\n")
-
-
 #Rmoving warnings from stramlit UI
 st.set_option('deprecation.showPyplotGlobalUse', False)
 

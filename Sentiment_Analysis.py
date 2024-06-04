@@ -7,6 +7,8 @@ import streamlit as st
 import seaborn as sns
 import re
 from textblob import TextBlob
+import nltk
+nltk.download(‘stopwords’)
 from nltk.tokenize import word_tokenize
 from nltk.stem import PorterStemmer
 from nltk.corpus import stopwords

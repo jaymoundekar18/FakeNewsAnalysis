@@ -4,8 +4,6 @@ matplotlib
 streamlit
 seaborn
 textblob
-nltk
-nltk.download('stopwords')
 scikit-learn
 transformers
 scipy

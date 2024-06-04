@@ -4,6 +4,7 @@ matplotlib
 streamlit
 seaborn
 textblob
+nltk==3.5
 scikit-learn
 transformers
 scipy

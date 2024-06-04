@@ -5,7 +5,7 @@ streamlit
 seaborn
 textblob
 nltk
-sklearn
+scikit-learn
 transformers
 scipy
 deep_translator

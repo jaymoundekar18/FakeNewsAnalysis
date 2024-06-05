@@ -6,7 +6,7 @@ seaborn==0.13.2
 textblob
 nltk==3.8.1; python_version >= '3.7'
 scikit-learn
-scipy==1.9.1
+scipy
 torch==2.3.0
 transformers==4.41.2
 deep_translator==1.9.1

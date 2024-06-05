@@ -1,1 +1,13 @@
-
+numpy
+pandas
+matplotlib
+streamlit
+seaborn
+textblob
+nltk==3.8.1; python_version >= '3.7'
+scikit-learn
+scipy
+torch
+transformers==4.41.2
+deep_translator
+wordcloud

@@ -40,13 +40,15 @@ st.write("----------------------------------------------------------------------
 
 # File Input
 uploaded_file = st.file_uploader('Upload your file here \n',type=["csv"])
+button = st.button("Analyze entire dataset")
 
 st.subheader("OR")
 
 # Text input
 tweet_txt = st.text_input("Enter your tweet:")
+sbutton = st.button("Analyze single tweet")
 
-if uploaded_file is not None:
+if button:
     st.write("#### Provided Dataset :")
     # Load the data into a DataFrame
     df = pd.read_csv(uploaded_file)
@@ -149,7 +151,7 @@ if uploaded_file is not None:
 
 
 
-elif tweet_txt:
+elif sbutton:
     to_translate = tweet_txt
     translated = GoogleTranslator(source='auto', target='english').translate(to_translate)
     st.write(f"##### Your text was : {translated}")

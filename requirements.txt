@@ -7,6 +7,8 @@ textblob
 nltk==3.8.1; python_version >= '3.7'
 scikit-learn
 transformers
+transformers-interpret
+torch
 scipy
 deep_translator
 wordcloud

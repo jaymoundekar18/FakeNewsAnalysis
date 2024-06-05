@@ -6,6 +6,7 @@ seaborn
 textblob
 nltk==3.8.1; python_version >= '3.7'
 scikit-learn
+torch
 transformers
 scipy
 deep_translator
